@@ -1,0 +1,32 @@
+// variables
+
+$black: #222222;
+$white: #fcfcfc;
+
+//font-colors
+
+//$primary-color: #333333; may not need this one
+$secondary-color: rgb(255, 230, 0);
+$hover-color: rgb(255, 200, 200);
+
+// mixins
+
+@mixin easeOut {
+  transition: 0.5s ease-out all;
+}
+// functions
+
+// media query shells
+
+@mixin screenSm {
+  @content;
+}
+@mixin screenMd {
+  @content;
+}
+@mixin screenLg {
+  @content;
+}
+@mixin screenXl {
+  @content;
+}
