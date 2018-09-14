@@ -37,28 +37,54 @@ a {
 
 .top-nav {
   background: $black;
-  min-height: 10vh;
+  min-height: 4em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 2px;
 
-  ul {
-    li {
-      list-style: none;
-      display: inline;
+  .menu-button {
+    color: $white;
+    position: fixed;
+    top: 0.75em;
+    left: 1em;
+    margin: auto;
+    background: $black;
+    width: auto;
+    @include easeOut;
+    z-index: 10;
 
-      a {
-        color: $secondary-color;
-      }
+    .btn-line {
+      background: $white;
+      margin: 5px;
+      width: 28px;
+      height: 3px;
+    }
+  }
+
+  .nav-items {
+    position: fixed;
+    right: 20px;
+    top: 1.25em;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    width: 80%;
+
+    a {
+      color: $secondary-color;
     }
   }
 }
 
 .slide-menu {
   @include easeOut;
-  background: $black;
+  background: rgba($black, 0.9);
   transform: translate3d(-200%, 0, 0);
-
-  z-index: 55;
+  position: absolute;
+  top: 0;
   visibility: hidden;
-  width: 25%;
+  width: 15%;
 
   &.show {
     @include easeOut;
@@ -70,6 +96,9 @@ a {
 
 main {
   height: 100%;
+  display: block;
+  top: 5em;
+  position: relative;
 }
 
 // media queries at the bottom
