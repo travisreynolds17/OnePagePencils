@@ -99,6 +99,55 @@ main {
   display: block;
   top: 5em;
   position: relative;
+  padding: 1em;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 15px;
+
+  img {
+    border-radius: 50%;
+    object-fit: contain;
+    height: 100px;
+  }
+
+  &.blue {
+    background: $background-primary;
+    button {
+      background: $background-secondary;
+    }
+    img {
+      grid-column: 3;
+    }
+    .text-block {
+      grid-column: 2;
+    }
+  }
+
+  &.gold {
+    background: $background-secondary;
+
+    button {
+      background: $background-primary;
+    }
+    img {
+      grid-column: 2;
+    }
+    .text-block {
+      grid-column: 3;
+    }
+  }
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px solid $black;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 // media queries at the bottom

@@ -75,4 +75,37 @@ main {
   height: 100%;
   display: block;
   top: 5em;
-  position: relative; }
+  position: relative;
+  padding: 1em; }
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 15px; }
+  .section img {
+    border-radius: 50%;
+    object-fit: contain;
+    height: 100px; }
+  .section.blue {
+    background: #90dff3; }
+    .section.blue button {
+      background: #f3c890; }
+    .section.blue img {
+      grid-column: 3; }
+    .section.blue .text-block {
+      grid-column: 2; }
+  .section.gold {
+    background: #f3c890; }
+    .section.gold button {
+      background: #90dff3; }
+    .section.gold img {
+      grid-column: 2; }
+    .section.gold .text-block {
+      grid-column: 3; }
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px solid #222222;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; }
