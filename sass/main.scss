@@ -42,6 +42,7 @@ a {
   top: 0;
   width: 100%;
   margin-bottom: 2px;
+  z-index: 9999;
 
   .menu-button {
     color: $white;
@@ -138,6 +139,47 @@ main {
     .text-block {
       grid-column: 3;
     }
+  }
+}
+
+.top-section {
+  padding: 25px;
+  background: $background-photo no-repeat;
+  height: 60vh;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    "head head"
+    "text form"
+    "brag brag";
+
+  .message {
+    grid-area: text;
+  }
+
+  .form {
+    border-radius: 5px;
+    padding: 15px;
+    background: $white;
+    display: block;
+    grid-area: form;
+
+    .top {
+      background: gray;
+      width: 100%;
+    }
+
+    .segment {
+      display: block;
+    }
+  }
+
+  .ribbon {
+    grid-area: brag;
+  }
+
+  .head {
+    grid-area: head;
   }
 }
 

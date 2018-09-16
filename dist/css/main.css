@@ -30,7 +30,8 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
-  margin-bottom: 2px; }
+  margin-bottom: 2px;
+  z-index: 9999; }
   .top-nav .menu-button {
     color: #fcfcfc;
     position: fixed;
@@ -102,6 +103,31 @@ main {
       grid-column: 2; }
     .section.gold .text-block {
       grid-column: 3; }
+
+.top-section {
+  padding: 25px;
+  background: url("/dist/images/pexels-photo-1367233.jpeg") no-repeat;
+  height: 60vh;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "head head" "text form" "brag brag"; }
+  .top-section .message {
+    grid-area: text; }
+  .top-section .form {
+    border-radius: 5px;
+    padding: 15px;
+    background: #fcfcfc;
+    display: block;
+    grid-area: form; }
+    .top-section .form .top {
+      background: gray;
+      width: 100%; }
+    .top-section .form .segment {
+      display: block; }
+  .top-section .ribbon {
+    grid-area: brag; }
+  .top-section .head {
+    grid-area: head; }
 
 button {
   padding: 10px;
