@@ -23,6 +23,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
 }
 
 footer {
@@ -41,8 +42,8 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
-  margin-bottom: 2px;
-  z-index: 9999;
+
+  z-index: 9998;
 
   .menu-button {
     color: $white;
@@ -53,7 +54,7 @@ a {
     background: $black;
     width: auto;
     @include easeOut;
-    z-index: 10;
+    z-index: 9999;
 
     .btn-line {
       background: $white;
@@ -86,6 +87,7 @@ a {
   top: 0;
   visibility: hidden;
   width: 15%;
+  z-index: 9996;
 
   &.show {
     @include easeOut;
@@ -98,9 +100,8 @@ a {
 main {
   height: 100%;
   display: block;
-  top: 5em;
+  top: 3em;
   position: relative;
-  padding: 1em;
 }
 
 .section {
@@ -143,43 +144,102 @@ main {
 }
 
 .top-section {
-  padding: 25px;
-  background: $background-photo no-repeat;
-  height: 60vh;
+  padding: 50px 200px;
+  color: $white;
+  background: $background-photo center / 100% no-repeat;
+  background-color: rgba($black, 0.8);
+  background-blend-mode: multiply;
+  height: 100vh;
   width: 100%;
   display: grid;
   grid-template-areas:
-    "head head"
-    "text form"
-    "brag brag";
+    "head head head"
+    "text form .."
+    "brag brag brag";
+
+  h1 {
+    font-size: 6rem;
+    text-shadow: 5px 5px $black;
+  }
 
   .message {
     grid-area: text;
+    width: 50%;
+    text-align: right;
+    padding: 20px;
+
+    h3 {
+      margin-bottom: 15px;
+    }
   }
 
-  .form {
-    border-radius: 5px;
-    padding: 15px;
-    background: $white;
-    display: block;
+  .card-container {
+    background: gray;
+    color: $black;
     grid-area: form;
+    border-radius: 10%;
+    padding: 10px 0;
+    width: 500px;
 
     .top {
-      background: gray;
+      color: $white;
+      font-size: 1.2em;
       width: 100%;
+      padding: 5px 0;
+      text-align: center;
     }
 
-    .segment {
-      display: block;
+    .form {
+      border-radius: 5px;
+      padding: 25px;
+      background: $white;
+      display: grid;
+      grid-row-gap: 1vh;
+      width: 100%;
+      margin: 0 auto;
+      height: 80%;
+
+      label {
+        width: 100px;
+        padding-right: 14px;
+      }
+
+      input {
+        border-radius: 5px;
+        padding: 3px;
+        box-shadow: 3px 3px 3px $black;
+      }
+      input[type="text"],
+      input[type="email"] {
+        width: calc(100% - 100px);
+      }
+
+      input[type="submit"] {
+        width: 100%;
+      }
+
+      #offer {
+        margin-right: 5px;
+      }
+      .segment {
+        display: block;
+        margin: 2px 0;
+      }
     }
   }
+}
 
-  .ribbon {
-    grid-area: brag;
-  }
+.ribbon {
+  grid-area: brag;
+}
 
-  .head {
-    grid-area: head;
+.head {
+  grid-area: head;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    padding-right: 15px;
   }
 }
 

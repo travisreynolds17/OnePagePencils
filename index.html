@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>One Page Pencils</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="dist/css/main.css" />
 
 </head>
@@ -44,30 +45,31 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque expedita voluptate fugit exercitationem
                 placeat voluptatibus.
             </div>
-            <div class="form">
+            <div class="card-container">
                 <div class="top">
                     Sign up and get 2 cents off your first order
                 </div>
 
-                <form action="">
-                    <div class="segment">
-                        <label for="fName">First</label>
-                        <label for="lName">Last</label>
-                    </div>
-                    <div class="segment">
-                        <input type="text" name="fName" id="fName" width="50%">
-
-                        <input type="text" name="lName" id="lName">
+                <form class="form" action="">
+                    <div class="segment" id="name">
+                        <label for="fName">Name</label>
+                        <input type="text" name="fName" id="fName">
                     </div>
 
-                    <label class="segment" for="email">Email</label>
-                    <input class="segment" type="email" name="email" id="email">
-                    <div class="segment">
+                    <div class="segment" id="email">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="segment" id="cbox">
                         <input type="checkbox" name="offer" id="offer"> Sign me up for the newsletter
                     </div>
-                    <input type="submit" value="">
+                    <div class="segment">
+                        <input type="submit" value="Let's go!">
+                    </div>
+
 
                 </form>
+
             </div>
             <div class="ribbon">
 

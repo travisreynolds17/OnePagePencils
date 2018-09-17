@@ -14,7 +14,8 @@ body {
   background: #fcfcfc;
   min-height: 100vh;
   margin: 0 auto;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif; }
 
 footer {
   background: #222222;
@@ -30,8 +31,7 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
-  margin-bottom: 2px;
-  z-index: 9999; }
+  z-index: 9998; }
   .top-nav .menu-button {
     color: #fcfcfc;
     position: fixed;
@@ -41,7 +41,7 @@ a {
     background: #222222;
     width: auto;
     transition: 0.5s ease-out all;
-    z-index: 10; }
+    z-index: 9999; }
     .top-nav .menu-button .btn-line {
       background: #fcfcfc;
       margin: 5px;
@@ -65,7 +65,8 @@ a {
   position: absolute;
   top: 0;
   visibility: hidden;
-  width: 15%; }
+  width: 15%;
+  z-index: 9996; }
   .slide-menu.show {
     transition: 0.5s ease-out all;
     transform: translate3d(0, 0, 0);
@@ -75,9 +76,8 @@ a {
 main {
   height: 100%;
   display: block;
-  top: 5em;
-  position: relative;
-  padding: 1em; }
+  top: 3em;
+  position: relative; }
 
 .section {
   display: grid;
@@ -105,29 +105,74 @@ main {
       grid-column: 3; }
 
 .top-section {
-  padding: 25px;
-  background: url("/dist/images/pexels-photo-1367233.jpeg") no-repeat;
-  height: 60vh;
+  padding: 50px 200px;
+  color: #fcfcfc;
+  background: url("/dist/images/pexels-photo-1367233.jpeg") center/100% no-repeat;
+  background-color: rgba(34, 34, 34, 0.8);
+  background-blend-mode: multiply;
+  height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-areas: "head head" "text form" "brag brag"; }
+  grid-template-areas: "head head head" "text form .." "brag brag brag"; }
+  .top-section h1 {
+    font-size: 6rem;
+    text-shadow: 5px 5px #222222; }
   .top-section .message {
-    grid-area: text; }
-  .top-section .form {
-    border-radius: 5px;
-    padding: 15px;
-    background: #fcfcfc;
-    display: block;
-    grid-area: form; }
-    .top-section .form .top {
-      background: gray;
-      width: 100%; }
-    .top-section .form .segment {
-      display: block; }
-  .top-section .ribbon {
-    grid-area: brag; }
-  .top-section .head {
-    grid-area: head; }
+    grid-area: text;
+    width: 50%;
+    text-align: right;
+    padding: 20px; }
+    .top-section .message h3 {
+      margin-bottom: 15px; }
+  .top-section .card-container {
+    background: gray;
+    color: #222222;
+    grid-area: form;
+    border-radius: 10%;
+    padding: 10px 0;
+    width: 500px; }
+    .top-section .card-container .top {
+      color: #fcfcfc;
+      font-size: 1.2em;
+      width: 100%;
+      padding: 5px 0;
+      text-align: center; }
+    .top-section .card-container .form {
+      border-radius: 5px;
+      padding: 25px;
+      background: #fcfcfc;
+      display: grid;
+      grid-row-gap: 1vh;
+      width: 100%;
+      margin: 0 auto;
+      height: 80%; }
+      .top-section .card-container .form label {
+        width: 100px;
+        padding-right: 14px; }
+      .top-section .card-container .form input {
+        border-radius: 5px;
+        padding: 3px;
+        box-shadow: 3px 3px 3px #222222; }
+      .top-section .card-container .form input[type="text"],
+      .top-section .card-container .form input[type="email"] {
+        width: calc(100% - 100px); }
+      .top-section .card-container .form input[type="submit"] {
+        width: 100%; }
+      .top-section .card-container .form #offer {
+        margin-right: 5px; }
+      .top-section .card-container .form .segment {
+        display: block;
+        margin: 2px 0; }
+
+.ribbon {
+  grid-area: brag; }
+
+.head {
+  grid-area: head;
+  display: flex;
+  align-items: center; }
+  .head h1 {
+    padding-right: 15px; }
 
 button {
   padding: 10px;
