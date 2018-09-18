@@ -88,12 +88,22 @@ a {
   visibility: hidden;
   width: 15%;
   z-index: 9996;
+  padding: 4em 0 0 0;
 
   &.show {
     @include easeOut;
     transform: translate3d(0, 0, 0);
     height: 100vh;
     visibility: visible;
+  }
+
+  .item {
+    display: block;
+    border-bottom: 2px solid $white;
+    background: darken($color: $white, $amount: 25);
+    height: 3em;
+    padding-left: 5px;
+    font-size: 3em;
   }
 }
 
@@ -144,7 +154,7 @@ main {
 }
 
 .top-section {
-  padding: 50px 200px;
+  padding: 0 150px;
   color: $white;
   background: $background-photo center / 100% no-repeat;
   background-color: rgba($black, 0.8);
@@ -152,24 +162,30 @@ main {
   height: 100vh;
   width: 100%;
   display: grid;
+  align-items: center;
   grid-template-areas:
     "head head head"
     "text form .."
     "brag brag brag";
 
-  h1 {
-    font-size: 6rem;
-    text-shadow: 5px 5px $black;
-  }
-
   .message {
     grid-area: text;
-    width: 50%;
-    text-align: right;
+    width: 100%;
+    text-align: left;
     padding: 20px;
+
+    h2 {
+      font-size: 2.4rem;
+      text-shadow: 5px 2px $black;
+      margin-bottom: 10px;
+    }
 
     h3 {
       margin-bottom: 15px;
+      font-weight: 10;
+      kerning: 2em;
+      font-size: 1.6em;
+      text-shadow: 3px 2px $black;
     }
   }
 
@@ -177,9 +193,11 @@ main {
     background: gray;
     color: $black;
     grid-area: form;
-    border-radius: 10%;
-    padding: 10px 0;
+    border-radius: 2%;
+    padding: 10px 0 0 0;
     width: 500px;
+    height: 100%;
+    display: block;
 
     .top {
       color: $white;
@@ -187,6 +205,7 @@ main {
       width: 100%;
       padding: 5px 0;
       text-align: center;
+      margin-bottom: 5px;
     }
 
     .form {
@@ -196,12 +215,14 @@ main {
       display: grid;
       grid-row-gap: 1vh;
       width: 100%;
-      margin: 0 auto;
+      margin: auto;
       height: 80%;
+      vertical-align: middle;
 
       label {
         width: 100px;
         padding-right: 14px;
+        vertical-align: middle;
       }
 
       input {
@@ -210,8 +231,10 @@ main {
         box-shadow: 3px 3px 3px $black;
       }
       input[type="text"],
-      input[type="email"] {
+      input[type="email"],
+      input[type="password"] {
         width: calc(100% - 100px);
+        float: right;
       }
 
       input[type="submit"] {
@@ -231,16 +254,6 @@ main {
 
 .ribbon {
   grid-area: brag;
-}
-
-.head {
-  grid-area: head;
-  display: flex;
-  align-items: center;
-
-  h1 {
-    padding-right: 15px;
-  }
 }
 
 button {
