@@ -65,6 +65,9 @@ a {
   }
 
   .nav-items {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 1.2em;
     position: fixed;
     right: 20px;
     top: 1.25em;
@@ -72,6 +75,14 @@ a {
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     width: 80%;
+
+    form {
+      display: flex;
+      input {
+        padding: 5px;
+        margin-right: 5px;
+      }
+    }
 
     a {
       color: $secondary-color;
@@ -83,10 +94,10 @@ a {
   @include easeOut;
   background: rgba($black, 0.9);
   transform: translate3d(-200%, 0, 0);
-  position: absolute;
+  position: fixed;
   top: 0;
   visibility: hidden;
-  width: 15%;
+  width: 25%;
   z-index: 9996;
   padding: 4em 0 0 0;
 
@@ -98,12 +109,20 @@ a {
   }
 
   .item {
-    display: block;
+    display: inline-block;
     border-bottom: 2px solid $white;
-    background: darken($color: $white, $amount: 25);
-    height: 3em;
-    padding-left: 5px;
-    font-size: 3em;
+    background: darken($color: $white, $amount: 45);
+    padding: 10px;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    width: 100%;
+    vertical-align: center;
+
+    &:hover {
+      background: blue;
+      color: $black;
+      @include easeOut;
+    }
   }
 }
 
