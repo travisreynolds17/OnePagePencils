@@ -45,25 +45,6 @@ a {
 
   z-index: 9998;
 
-  .menu-button {
-    color: $white;
-    position: fixed;
-    top: 0.75em;
-    left: 1em;
-    margin: auto;
-    background: $black;
-    width: auto;
-    @include easeOut;
-    z-index: 9999;
-
-    .btn-line {
-      background: $white;
-      margin: 5px;
-      width: 28px;
-      height: 3px;
-    }
-  }
-
   .nav-items {
     text-transform: uppercase;
     font-weight: 100;
@@ -71,10 +52,31 @@ a {
     position: fixed;
     right: 20px;
     top: 1.25em;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: space-between;
+    float: right;
+
     align-items: center;
-    width: 80%;
+    width: 95%;
+
+    .menu-button {
+      color: $white;
+      position: fixed;
+      top: 1.2em;
+      left: 1em;
+      margin: 0 10px 0 0;
+      background: $black;
+      width: auto;
+      @include easeOut;
+      z-index: 9999;
+
+      .btn-line {
+        background: $white;
+        margin: 5px;
+        width: 28px;
+        height: 3px;
+      }
+    }
 
     form {
       display: flex;
@@ -86,6 +88,11 @@ a {
 
     a {
       color: $secondary-color;
+      margin: 5px 0;
+    }
+
+    #id {
+      padding-left: 11em;
     }
   }
 }
@@ -104,7 +111,6 @@ a {
   &.show {
     @include easeOut;
     transform: translate3d(0, 0, 0);
-    height: 100vh;
     visibility: visible;
   }
 

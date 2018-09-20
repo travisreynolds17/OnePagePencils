@@ -32,21 +32,6 @@ a {
   top: 0;
   width: 100%;
   z-index: 9998; }
-  .top-nav .menu-button {
-    color: #fcfcfc;
-    position: fixed;
-    top: 0.75em;
-    left: 1em;
-    margin: auto;
-    background: #222222;
-    width: auto;
-    transition: 0.5s ease-out all;
-    z-index: 9999; }
-    .top-nav .menu-button .btn-line {
-      background: #fcfcfc;
-      margin: 5px;
-      width: 28px;
-      height: 3px; }
   .top-nav .nav-items {
     text-transform: uppercase;
     font-weight: 100;
@@ -54,17 +39,36 @@ a {
     position: fixed;
     right: 20px;
     top: 1.25em;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: space-between;
+    float: right;
     align-items: center;
-    width: 80%; }
+    width: 95%; }
+    .top-nav .nav-items .menu-button {
+      color: #fcfcfc;
+      position: fixed;
+      top: 1.2em;
+      left: 1em;
+      margin: 0 10px 0 0;
+      background: #222222;
+      width: auto;
+      transition: 0.5s ease-out all;
+      z-index: 9999; }
+      .top-nav .nav-items .menu-button .btn-line {
+        background: #fcfcfc;
+        margin: 5px;
+        width: 28px;
+        height: 3px; }
     .top-nav .nav-items form {
       display: flex; }
       .top-nav .nav-items form input {
         padding: 5px;
         margin-right: 5px; }
     .top-nav .nav-items a {
-      color: #ffe600; }
+      color: #ffe600;
+      margin: 5px 0; }
+    .top-nav .nav-items #id {
+      padding-left: 11em; }
 
 .slide-menu {
   transition: 0.5s ease-out all;
@@ -79,7 +83,6 @@ a {
   .slide-menu.show {
     transition: 0.5s ease-out all;
     transform: translate3d(0, 0, 0);
-    height: 100vh;
     visibility: visible; }
   .slide-menu .item {
     display: inline-block;
