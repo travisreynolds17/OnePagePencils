@@ -22,14 +22,20 @@ body {
   background: $white;
   min-height: 100vh;
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: "Roboto", sans-serif;
 }
 
 footer {
   background: $black;
   color: $secondary-color;
-  min-height: 10vh;
+  min-height: 7vh;
+  width: 100%;
+  top: 93vh;
+  position: absolute;
+  z-index: 9994;
+  padding: 15px;
+  text-align: center;
 }
 
 a {
@@ -69,6 +75,7 @@ a {
       width: auto;
       @include easeOut;
       z-index: 9999;
+      cursor: pointer;
 
       .btn-line {
         background: $white;
@@ -91,8 +98,9 @@ a {
       margin: 5px 0;
     }
 
-    #id {
-      padding-left: 11em;
+    #home {
+      padding-left: 5em;
+      font-weight: bold;
     }
   }
 }
@@ -117,7 +125,7 @@ a {
   .item {
     display: inline-block;
     border-bottom: 2px solid $white;
-    background: darken($color: $white, $amount: 45);
+    background: $black;
     padding: 10px;
     font-size: 1.5em;
     line-height: 1.5em;
@@ -128,6 +136,10 @@ a {
       background: blue;
       color: $black;
       @include easeOut;
+    }
+
+    a {
+      color: $white;
     }
   }
 }

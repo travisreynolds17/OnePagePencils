@@ -14,13 +14,19 @@ body {
   background: #fcfcfc;
   min-height: 100vh;
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: "Roboto", sans-serif; }
 
 footer {
   background: #222222;
   color: #ffe600;
-  min-height: 10vh; }
+  min-height: 7vh;
+  width: 100%;
+  top: 93vh;
+  position: absolute;
+  z-index: 9994;
+  padding: 15px;
+  text-align: center; }
 
 a {
   text-decoration: none; }
@@ -53,7 +59,8 @@ a {
       background: #222222;
       width: auto;
       transition: 0.5s ease-out all;
-      z-index: 9999; }
+      z-index: 9999;
+      cursor: pointer; }
       .top-nav .nav-items .menu-button .btn-line {
         background: #fcfcfc;
         margin: 5px;
@@ -67,8 +74,9 @@ a {
     .top-nav .nav-items a {
       color: #ffe600;
       margin: 5px 0; }
-    .top-nav .nav-items #id {
-      padding-left: 11em; }
+    .top-nav .nav-items #home {
+      padding-left: 5em;
+      font-weight: bold; }
 
 .slide-menu {
   transition: 0.5s ease-out all;
@@ -87,7 +95,7 @@ a {
   .slide-menu .item {
     display: inline-block;
     border-bottom: 2px solid #fcfcfc;
-    background: #898989;
+    background: #222222;
     padding: 10px;
     font-size: 1.5em;
     line-height: 1.5em;
@@ -97,6 +105,8 @@ a {
       background: blue;
       color: #222222;
       transition: 0.5s ease-out all; }
+    .slide-menu .item a {
+      color: #fcfcfc; }
 
 main {
   height: 100%;
