@@ -23,15 +23,32 @@ $hover-color: rgb(255, 200, 200);
 
 // media query shells
 
+// Media query mixins - to arrange pages for different screen sizes. Remember, these are only skeletons. The rest of the code for these is in _mobile.scss
+
+// Smartphone
 @mixin screenSm {
-  @content;
+  @media screen and (max-width: 500px) {
+    @content;
+  }
 }
+
+// Tablets, some laptops
 @mixin screenMd {
-  @content;
+  @media screen and (max-width: 768px) and (min-width: 501px) {
+    @content;
+  }
 }
+
+//Desktop
 @mixin screenLg {
-  @content;
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
 }
+
+// Extra wide screens
 @mixin screenXl {
-  @content;
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
 }

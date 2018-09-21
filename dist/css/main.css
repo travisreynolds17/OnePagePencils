@@ -92,6 +92,8 @@ a {
     transition: 0.5s ease-out all;
     transform: translate3d(0, 0, 0);
     visibility: visible; }
+  .slide-menu .item.slide-nav {
+    display: none; }
   .slide-menu .item {
     display: inline-block;
     border-bottom: 2px solid #fcfcfc;
@@ -114,31 +116,6 @@ main {
   top: 3em;
   position: relative; }
 
-.section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 15px; }
-  .section img {
-    border-radius: 50%;
-    object-fit: contain;
-    height: 100px; }
-  .section.blue {
-    background: #90dff3; }
-    .section.blue button {
-      background: #f3c890; }
-    .section.blue img {
-      grid-column: 3; }
-    .section.blue .text-block {
-      grid-column: 2; }
-  .section.gold {
-    background: #f3c890; }
-    .section.gold button {
-      background: #90dff3; }
-    .section.gold img {
-      grid-column: 2; }
-    .section.gold .text-block {
-      grid-column: 3; }
-
 .top-section {
   padding: 0 150px;
   color: #fcfcfc;
@@ -149,7 +126,7 @@ main {
   width: 100%;
   display: grid;
   align-items: center;
-  grid-template-areas: "head head head" "text form .." "brag brag brag"; }
+  grid-template-areas: "text form .."; }
   .top-section .message {
     grid-area: text;
     width: 100%;
@@ -172,7 +149,7 @@ main {
     border-radius: 2%;
     padding: 10px 0 0 0;
     width: 500px;
-    height: 100%;
+    height: 40%;
     display: block; }
     .top-section .card-container .top {
       color: #fcfcfc;
@@ -212,12 +189,47 @@ main {
         display: block;
         margin: 2px 0; }
 
-.ribbon {
-  grid-area: brag; }
-
 button {
   padding: 10px;
   border-radius: 5px;
   box-shadow: 1px 1px 1px solid #222222;
   text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .slide-menu {
+    width: 25%;
+    height: auto; }
+    .slide-menu .slide-nav {
+      display: none; }
+  .top-section {
+    background: #fcfcfc; }
+  .mobile-nav {
+    display: inline; } }
+
+@media screen and (max-width: 500px) {
+  body {
+    overflow: visible;
+    overflow-x: hidden; }
+  .top-nav #signInForm {
+    position: absolute;
+    top: 45px;
+    margin: 0 auto; }
+  .top-nav .nav-items .menu-button {
+    background: none; }
+    .top-nav .nav-items .menu-button .btn-line {
+      background: gray; }
+  .slide-menu {
+    width: 35%;
+    padding: 95px 0 0 0; }
+    .slide-menu .item .slide-nav {
+      display: block;
+      visibility: visible; }
+  .top-section {
+    background: #fcfcfc; }
+  .mobile-nav {
+    display: none; }
+    .mobile-nav#home {
+      display: inline;
+      font-size: 1.2em;
+      padding-bottom: 15px; } }

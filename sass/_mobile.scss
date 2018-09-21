@@ -1,0 +1,73 @@
+@include screenXl {
+}
+
+@include screenLg {
+  .slide-menu {
+    width: 25%;
+    height: auto;
+
+    .slide-nav {
+      display: none;
+    }
+  }
+
+  .top-section {
+    background: $white;
+  }
+
+  .mobile-nav {
+    display: inline;
+  }
+}
+
+@include screenMd {
+}
+
+@include screenSm {
+  body {
+    overflow: visible;
+    overflow-x: hidden;
+  }
+
+  .top-nav {
+    #signInForm {
+      position: absolute;
+      top: 45px;
+      margin: 0 auto;
+    }
+    .nav-items {
+      .menu-button {
+        background: none;
+        .btn-line {
+          background: gray;
+        }
+      }
+    }
+  }
+
+  .slide-menu {
+    width: 35%;
+    padding: 95px 0 0 0;
+
+    .item {
+      .slide-nav {
+        display: block;
+        visibility: visible;
+      }
+    }
+  }
+
+  .top-section {
+    background: $white;
+  }
+
+  .mobile-nav {
+    display: none;
+
+    &#home {
+      display: inline;
+      font-size: 1.2em;
+      padding-bottom: 15px;
+    }
+  }
+}
