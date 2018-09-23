@@ -114,6 +114,7 @@ a {
   width: 25%;
   z-index: 9996;
   padding: 4em 0 0 0;
+  box-shadow: 3px 3px 3px gray;
 
   &.show {
     @include easeOut;

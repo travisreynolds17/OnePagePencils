@@ -87,7 +87,8 @@ a {
   visibility: hidden;
   width: 25%;
   z-index: 9996;
-  padding: 4em 0 0 0; }
+  padding: 4em 0 0 0;
+  box-shadow: 3px 3px 3px gray; }
   .slide-menu.show {
     transition: 0.5s ease-out all;
     transform: translate3d(0, 0, 0);
@@ -210,7 +211,8 @@ button {
 @media screen and (max-width: 500px) {
   body {
     overflow: visible;
-    overflow-x: hidden; }
+    overflow-x: hidden;
+    min-width: 500px; }
   .top-nav #signInForm {
     position: absolute;
     top: 45px;
@@ -222,11 +224,37 @@ button {
   .slide-menu {
     width: 35%;
     padding: 95px 0 0 0; }
-    .slide-menu .item .slide-nav {
+    .slide-menu .item.slide-nav {
       display: block;
       visibility: visible; }
   .top-section {
-    background: #fcfcfc; }
+    background: #fcfcfc;
+    display: block;
+    padding: 80px 0 0 0;
+    color: #222222; }
+    .top-section .message h2,
+    .top-section .message h3 {
+      text-shadow: none; }
+    .top-section .card-container {
+      width: 500px;
+      margin: 0 auto;
+      border-radius: 0px;
+      display: block; }
+      .top-section .card-container .form {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        border-radius: 0px;
+        align-items: left; }
+        .top-section .card-container .form label {
+          float: left; }
+        .top-section .card-container .form input[type="text"],
+        .top-section .card-container .form input[type="email"],
+        .top-section .card-container .form input[type="password"] {
+          width: calc(95% - 100px);
+          float: left; }
+        .top-section .card-container .form input[type="submit"] {
+          width: 95%; }
   .mobile-nav {
     display: none; }
     .mobile-nav#home {

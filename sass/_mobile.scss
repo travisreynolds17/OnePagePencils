@@ -27,6 +27,7 @@
   body {
     overflow: visible;
     overflow-x: hidden;
+    min-width: 500px;
   }
 
   .top-nav {
@@ -50,7 +51,7 @@
     padding: 95px 0 0 0;
 
     .item {
-      .slide-nav {
+      &.slide-nav {
         display: block;
         visibility: visible;
       }
@@ -59,6 +60,46 @@
 
   .top-section {
     background: $white;
+    display: block;
+    padding: 80px 0 0 0;
+    color: $black;
+
+    .message {
+      h2,
+      h3 {
+        text-shadow: none;
+      }
+    }
+
+    .card-container {
+      width: 500px;
+      margin: 0 auto;
+      border-radius: 0px;
+      display: block;
+
+      .form {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        border-radius: 0px;
+        align-items: left;
+
+        label {
+          float: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          width: calc(95% - 100px);
+          float: left;
+        }
+
+        input[type="submit"] {
+          width: 95%;
+        }
+      }
+    }
   }
 
   .mobile-nav {
