@@ -27,14 +27,7 @@ $hover-color: rgb(255, 200, 200);
 
 // Smartphone
 @mixin screenSm {
-  @media screen and (max-width: 500px) {
-    @content;
-  }
-}
-
-// Tablets, some laptops
-@mixin screenMd {
-  @media screen and (max-width: 768px) and (min-width: 501px) {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }

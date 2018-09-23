@@ -2,25 +2,51 @@
 }
 
 @include screenLg {
+  body {
+    min-width: 769px;
+  }
   .slide-menu {
     width: 25%;
     height: auto;
 
-    .slide-nav {
-      display: none;
+    .item {
+      &.slide-nav {
+        display: block;
+        visibility: visible;
+      }
     }
   }
 
   .top-section {
-    background: $white;
+    background: $background-photo;
+    display: block;
+    padding: 80px 0 0 0;
+    color: $black;
+
+    .message {
+      margin: 0 auto;
+      text-align: center;
+      h2,
+      h3 {
+        text-shadow: none;
+      }
+    }
+
+    .card-container {
+      margin: 0 auto;
+    }
   }
 
   .mobile-nav {
-    display: inline;
-  }
-}
+    display: none;
 
-@include screenMd {
+    &#home {
+      display: inline;
+      font-size: 0.9em;
+      padding-bottom: 15px;
+      padding-right: 10px;
+    }
+  }
 }
 
 @include screenSm {
